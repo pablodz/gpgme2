@@ -281,7 +281,6 @@ func TestContext_Import(t *testing.T) {
 	ctx, err := New()
 	checkError(t, err)
 	checkError(t, ctx.SetEngineInfo(ProtocolOpenPGP, "", homeDir))
-
 	f, err := os.Open("./testdata/pubkeys.gpg")
 	checkError(t, err)
 	defer f.Close()
@@ -338,7 +337,7 @@ func TestContext_Export(t *testing.T) {
 	checkError(t, err)
 
 	_, _ = data.Seek(0, 0)
-	allKeys, err := ioutil.ReadAll(data)
+	allKeys, err := io.ReadAll(data)
 	checkError(t, err)
 	if len(allKeys) < 1 {
 		t.Error("Expected exported keys, got empty buffer")

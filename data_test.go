@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"errors"
 	"io"
-	"io/ioutil"
 	"os"
 	"testing"
 )
@@ -39,7 +38,9 @@ func TestData_memory(t *testing.T) {
 }
 
 func TestData_file(t *testing.T) {
-	f, err := ioutil.TempFile("", "gpgme")
+	// tempfile with io
+
+	f, err := os.CreateTemp("", "gpgme")
 	checkError(t, err)
 	defer func() {
 		checkError(t, f.Close())
