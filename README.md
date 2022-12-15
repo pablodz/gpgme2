@@ -1,3 +1,4 @@
+# [DEPRECATED] USE github.com/ProtonMail/gopenpgp instead
 # GPGME (golang)
 
 Go wrapper for the GPGME library.
