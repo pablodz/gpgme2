@@ -28,7 +28,7 @@ func TestData_memory_empty(t *testing.T) {
 
 func TestData_memory(t *testing.T) {
 	// Test ordinary data, and empty slices
-	for _, content := range [][]byte{[]byte(testCipherText), []byte{}} {
+	for _, content := range [][]byte{[]byte(testCipherText), {}} {
 		dh, err := NewDataBytes(content)
 		checkError(t, err)
 

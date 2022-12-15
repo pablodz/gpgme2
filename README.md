@@ -6,8 +6,8 @@ This library is intended for use with desktop applications. If you are looking t
 
 ## Installation
 
-    go get -u github.com/proglottis/gpgme
+    go get -u github.com/pablodz/gpgme2
 
 ## Documentation
 
-* [godoc](https://godoc.org/github.com/proglottis/gpgme)
+* [godoc](https://godoc.org/github.com/pablodz/gpgme2)
